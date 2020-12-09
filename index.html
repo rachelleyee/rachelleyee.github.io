@@ -41,7 +41,7 @@
         var user = {
             email: email, 
             name: fullname, 
-            destination: destination, 
+            destination: destination,   
             details: details
         };
         analytics.identify('1234', {
@@ -50,7 +50,15 @@
         });
         analytics.track('destination submitted', user, function() {
             window.location.href = "";
+        },
+                        {
+  context: {
+    protocols: {
+      event_version: 1
+    }
+  }    
         });
+        
       }
 </script>
 
