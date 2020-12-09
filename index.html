@@ -48,14 +48,16 @@
             email: email, 
             name: fullname
         });
-        analytics.track('destination submitted', user, function() {
-            window.location.href = "";
-        });
+
+         analytics.track('destination submitted', user, function() {
+          window.location.href = "";,
+          }, {
+          context: {
+            protocols: {
+              event_version: 2
+            }
+          }
         
-        analytics.track('submit button clicked', user, function() {
-            window.location.href = "";
-        });
-      }
 </script>
 
   
